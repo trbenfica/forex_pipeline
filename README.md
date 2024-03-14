@@ -6,12 +6,12 @@
 
 Fornece uma tabela com a cotação de fechamento de até 25 moedas, de forma *gratuita* e *contínua*.
 
-Os dados brutos são obtidos através da API [AlphaVantage](https://www.alphavantage.co/). Após aquisição dos dados, 
+Os dados brutos são obtidos através da API [AlphaVantage](https://www.alphavantage.co/). Após o processamento dos dados, 
 [DBeaver](https://dbeaver.io/download/) permite visualizar e gerenciar os dados presentes no banco de dados destino. Este projeto 
 conta igualmente com um dashboard na ferramenta [Grafana](https://grafana.com/), a qual exibe as séries temporais das variações 
-de cada moeda (veja a seção [screenshots](#Screenshots)).
+de cada moeda (veja a seção [Screenshots](#Screenshots)).
 
-Nos dia úteis, a DAG "FOREX" é disparada no Airflow, a qual executa as seguintes tarefas:
+De segunda a sexta, a DAG "FOREX" é disparada no Airflow, a qual executa as seguintes tarefas:
 
 1. Realiza download de todos arquivos .csv (um para cada moeda), os quais contém as últimas cotações para cada moeda abrangida neste projeto
 1. Através do PySpark, limpa os dados de cada .csv, removendo colunas irrelevantes, filtrando dados e unindo todos num único dataframe.
@@ -38,7 +38,7 @@ distribuídos na mesma rede Docker. Os serviços principais são os seguintes:
 
 ### Moedas suportadas
 
-É possível adicionar e remover as moedas processadas livremente. É possível processar até 25 moedas de uma só vez (dada a limitação da 
+É possível adicionar e remover as moedas processadas livremente. É possível processar até 25 moedas de uma só vez (na  
 versão gratuita da API). Entretando, se o usuário dispor de uma chave Premium da API, a quantidade passa a ser ilimitada.
 
 As moedas suportadas pela API encontram-se em [currency_list](https://www.alphavantage.co/physical_currency_list/). Para alterar as moedas
