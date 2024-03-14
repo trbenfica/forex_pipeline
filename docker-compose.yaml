@@ -328,7 +328,7 @@ services:
       - ./mnt/grafana:/var/lib/grafana
     ports:
       - 3000:3000
-    user: '1000'
+    user: ${USER_ID}
 
 
 
