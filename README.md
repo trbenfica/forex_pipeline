@@ -51,6 +51,9 @@ processadas, basta modificar os seguintes arquivos:
 ### Run
 
 Antes de rodar, é necessário ter o Docker e Docker Compose instalados.
+Importante: A API funciona a partir de uma chave (por sua vez gratuita). É importante adquirir a mesma no site da 
+[API](https://www.alphavantage.co/support/#api-key), e inseri-la na variável "api_key", presente no arquivo 
+"mnt/airflow/dags/scripts/consts.py". Este projeto contém uma chave gratuita, mas não há garantia que a mesma seja válida.
 
 1. Clone o repositório:
 
@@ -70,30 +73,33 @@ Antes de rodar, é necessário ter o Docker e Docker Compose instalados.
   docker compose up
   ```
 
-Observação: a API funciona a partir de uma chave (por sua vez gratuita). É importante adquirir a mesma no site da 
-[API](https://www.alphavantage.co/support/#api-key), e inseri-la na variável "api_key", presente no arquivo 
-"mnt/airflow/dags/scripts/consts.py".
+4. Acesse o Airflow e inicie a DAG "FOREX"
 
 Para acessar os serviços:
 
 - Airflow:
 
-    - endereço: localhost:8080
-    - login: airflow
-    - senha: airflow
+  - endereço: localhost:8080
+  - login: airflow
+  - senha: airflow
+
+- Grafana:
+
+  - endereço: localhost:8081
+  - login: admin
+  - senha: admin
 
 - DBeaver:
 
-    - endereço: localhost:8081
-    - login: dbeaver
-    - senha: Password85
+  Para configurar este serviço, é necessário entrar em "localhost:3000", e configurar
+  uma conexão com o banco de dados com as seguintes informações:
 
--Grafana:
-
-    - endereço: localhost:3000
-    - login: 
-    - senha: 
-    
+  - driver: postgres
+  - host: db_out
+  - port: 5432
+  - username: postgres
+  - password: postgres
+  - database: FOREX
 
 
 ### Screenshots
