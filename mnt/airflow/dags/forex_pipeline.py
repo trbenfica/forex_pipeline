@@ -13,7 +13,7 @@ default_args = {
 }
 
 
-with DAG("FOREX", start_date=datetime(2024, 1, 27), schedule_interval='@daily', 
+with DAG("FOREX", start_date=datetime(2024, 1, 27), schedule_interval='0 12 * * 1-5', 
     default_args=default_args, catchup=False) as dag:
   
   # (Extract) - Extrai dados da API
