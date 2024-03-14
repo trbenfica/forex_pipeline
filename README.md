@@ -74,6 +74,27 @@ Observação: a API funciona a partir de uma chave (por sua vez gratuita). É im
 [API](https://www.alphavantage.co/support/#api-key), e inseri-la na variável "api_key", presente no arquivo 
 "mnt/airflow/dags/scripts/consts.py".
 
+Para acessar os serviços:
+
+- Airflow:
+
+    - endereço: localhost:8080
+    - login: airflow
+    - senha: airflow
+
+- DBeaver:
+
+    - endereço: localhost:8081
+    - login: dbeaver
+    - senha: Password85
+
+-Grafana:
+
+    - endereço: localhost:3000
+    - login: 
+    - senha: 
+    
+
 
 ### Screenshots
 
