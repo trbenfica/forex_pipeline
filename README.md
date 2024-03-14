@@ -50,19 +50,21 @@ processadas, basta modificar os seguintes arquivos:
 
 ### Run
 
+Antes de rodar, é necessário ter o Docker e Docker Compose instalados.
+
 1. Clone o repositório:
 
   ```bash
   git clone https://github.com/trbenfica/forex_pipeline.git
   ```
 
-1. Navegue até o diretório clonado:
+2. Navegue até o diretório clonado:
 
   ```bash
   cd forex_pipeline
   ```
 
-1. Execute o seguinte comando:
+3. Execute o seguinte comando:
 
   ```bash
   docker compose up
