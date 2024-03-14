@@ -24,7 +24,7 @@ Adicionalmente, todas etapas contém verificações de forma a evitar duplicaç�
 
 ### Arquitetura
 
-![forex_architecture](./images/forex_architecture.png)
+![forex_architecture](./images/architecture.png)
 
 Como observado na figura acima, o projeto é construído a partir do Docker-Compose. Portanto, trata-se de diversos serviços
 distribuídos na mesma rede Docker. Os serviços principais são os seguintes:
