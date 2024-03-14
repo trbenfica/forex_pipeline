@@ -3,10 +3,10 @@ from apache/airflow:2.8.1
 
 run pip install apache-airflow-providers-apache-spark
 
-env AIRFLOW_CONN_MY_PROD_DATABASE='{
-    "conn_type": "Spark Connect",
-    "host": "spark-master",
-    "port": 8080,
+env AIRFLOW_CONN_MY_PROD_DATABASE='{     \
+    "conn_type": "Spark Connect",    \
+    "host": "spark-master",    \
+    "port": 8080,    \
 }'
 
 user root
