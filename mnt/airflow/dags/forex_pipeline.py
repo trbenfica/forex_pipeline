@@ -26,7 +26,7 @@ with DAG("FOREX", start_date=datetime(2024, 1, 27), schedule_interval='0 12 * * 
   process_data = SparkSubmitOperator(
           task_id="process_data",
           application="/opt/airflow/dags/scripts/process_data.py",
-          conn_id="spark_default",
+          conn_id="SPARK_DEFAULT",
           verbose=False
   )
 

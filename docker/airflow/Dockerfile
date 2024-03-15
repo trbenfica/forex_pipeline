@@ -1,20 +1,16 @@
 
-from apache/airflow:2.8.1
+FROM apache/airflow:2.8.1
 
-run pip install apache-airflow-providers-apache-spark
+RUN pip install apache-airflow-providers-apache-spark
 
-env AIRFLOW_CONN_MY_PROD_DATABASE='{     \
-    "conn_type": "Spark Connect",    \
-    "host": "spark-master",    \
-    "port": 8080,    \
-}'
+ENV AIRFLOW_CONN_SPARK_DEFAULT='{"conn_type": "Spark Connect", "host": "spark-master", "port": 8080}'
 
-user root
+USER root
 
-run apt-get update -y && \
+RUN apt-get update -y && \
     apt-get upgrade -yqq && \
     apt-get install openjdk-17-jdk -yqq
     
-user airflow
+USER airflow
 
 
