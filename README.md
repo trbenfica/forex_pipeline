@@ -24,7 +24,7 @@ Adicionalmente, todas etapas contém verificações de forma a evitar duplicaç�
 
 ### Arquitetura
 
-![forex_architecture](./images/architecture.png)
+![forex_architecture](./docs/architecture.png)
 
 Como observado na figura acima, o projeto é construído a partir do Docker-Compose. Portanto, trata-se de diversos serviços
 distribuídos na mesma rede Docker. Os serviços principais são os seguintes:
@@ -104,9 +104,9 @@ Para acessar os serviços:
 
 ### Screenshots
 
-![grafana1](./images/grafana%201.png)
-![dbeaver](./images/dbeaver.png)
-![airflow](./images/dag.png)
-![grafana2](./images/grafana%202.png)
-![grafana3](./images/grafana%203.png)
+![grafana1](./docs/grafana%201.png)
+![dbeaver](./docs/dbeaver.png)
+![airflow](./docs/dag.png)
+![grafana2](./docs/grafana%202.png)
+![grafana3](./docs/grafana%203.png)
 
