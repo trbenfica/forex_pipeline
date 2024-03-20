@@ -51,9 +51,10 @@ processadas, basta modificar os seguintes arquivos:
 ### Run
 
 Antes de rodar, é necessário ter o Docker e Docker Compose instalados.
-Importante: A API funciona a partir de uma chave (por sua vez gratuita). É importante adquirir a mesma no site da 
+
+*Importante*: A API funciona a partir de uma chave (por sua vez gratuita). É importante adquirir a mesma no site da 
 [API](https://www.alphavantage.co/support/#api-key), e inseri-la na variável "api_key", presente no arquivo 
-"mnt/airflow/dags/scripts/consts.py". Este projeto contém uma chave gratuita, mas não há garantia que a mesma seja válida.
+"mnt/airflow/dags/scripts/consts.py". Este projeto contém uma chave gratuita, mas não há garantia que a mesma ainda seja válida.
 
 1. Clone o repositório:
 
