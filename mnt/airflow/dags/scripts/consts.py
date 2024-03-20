@@ -8,7 +8,7 @@ api_key = 'NCL7QMJBR8HRYGTU'
 # moedas a serem importadas. Pode-se adicionar e remover moedas à vontade, porém é
 # preciso alterar também o esquema do banco de dados destino.
 coin_codes = ['EUR', 'GBP', 'BRL', 'JPY', 'KRW', 'SAR', 'SGD', 'RUB', 'CAD', 'CHF',
-              'DKK', 'HKD', 'FKP', 'CUP', 'MXN', 'NOK', 'PHP', 'ARS']
+              'DKK', 'HKD', 'CUP', 'MXN', 'NOK', 'PHP', 'ARS']
 
 # data atual, define o diretório de trabalho
 today = datetime.datetime.now(pytz.timezone('America/Sao_Paulo'))

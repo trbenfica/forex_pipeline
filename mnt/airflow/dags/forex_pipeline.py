@@ -27,7 +27,8 @@ with DAG("FOREX", start_date=datetime(2024, 1, 27), schedule_interval='0 12 * * 
           task_id="process_data",
           application="/opt/airflow/dags/scripts/process_data.py",
           conn_id="SPARK_DEFAULT",
-          verbose=False
+          verbose=False,
+          driver_class_path="/driver/postgresql-42.7.3.jar"
   )
 
   # (Load) carrega os dados para o destino
